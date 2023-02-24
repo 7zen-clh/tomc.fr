@@ -1,0 +1,239 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #303030;
+}
+
+/*---------Taille-Menu-------*/
+
+@media only screen and (max-width: 700px){
+  .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+  }
+  .container p{
+      font-size: 2em;
+      color: white;
+      text-align: center;
+  }
+  .ls {
+      display: none;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-height: 700px) {
+  .container {
+      display: none;
+  }
+}
+
+/*---------Menu-------*/
+#menu{
+    background-color: #222222;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 47px;
+}
+
+.btnmenu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.btmenu{
+    float: left;   
+}
+.btmenu a:hover:not(.btconnexion){  
+  background: red;
+}
+
+.btnmenu a{
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.btconnexion{
+  background: linear-gradient(147deg,#ff0000c8 9%, #190eb479 80%);
+}
+
+input{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+#maRecherche {
+  width: 300px;
+  height: 25px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+  color: #444;
+  transition: all 0.2s ease-in-out;
+}
+
+#maRecherche:focus {
+  outline: none;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  color: #333;
+  transform: scale(1.1);
+}
+
+
+/*---------contenu-------*/
+
+.Titre{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    border-bottom: 4px #222222 solid;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 700px;
+}
+
+
+.ps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #171717;
+}
+
+.blog-card{
+    position: absolute;
+    height: 370px;
+    width: 95%;
+    max-width: 850px;
+    margin: auto;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0px 10px 50px rgba(134, 21, 21, 0.3);
+  }
+  .inner-part{
+    position: absolute;
+    display: flex;
+    height: 360px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+  }
+
+  .content{
+    padding: 0 20px 0 35px;
+    width: 530px;
+    margin-left: 50px;
+    opacity: 0;
+    transition: .25s;
+  }
+
+  #tap-1:checked ~ .inner-part .content-1,
+  #tap-2:checked ~ .inner-part .content-2,
+  #tap-3:checked ~ .inner-part .content-3{
+    opacity: 15;
+    margin-left: 0px;
+    z-index: 100;
+    transition-delay: .10s;
+  }
+
+  .content span{
+    display: block;
+    color: #7b7992;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 500
+  }
+
+  .content .title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-bottom: 20px;
+  }
+  .content .text{
+    color: #4e4a67;
+    font-size: 19px;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    text-align: justify;
+  }
+
+  .sliders{
+    position: absolute;
+    bottom: 25px;
+    left: 65%;
+    transform: translateX(-80%);
+    z-index: 12;
+  }
+  
+  .sliders .tap{
+    position: relative;
+    height: 10px;
+    width: 50px;
+    background: #d9d9d9;
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 0 3px;
+    cursor: pointer;
+  }
+  .sliders .tap:hover{
+    background: #cccccc;
+  }
+  .sliders .tap:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: -100%;
+    background: linear-gradient(147deg,#ff0000c8 9%, #190eb479 80%);
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"]{
+    display: none;
+  }
+  #tap-1:checked ~ .sliders .tap-1:before,
+  #tap-2:checked ~ .sliders .tap-2:before,
+  #tap-3:checked ~ .sliders .tap-3:before{
+    transform: scaleX(1);
+    width: 100%;
+  }
+
+/*--------------Fin de page------------*/
+footer{ 
+    background: #171717;
+    text-align: center;
+    color: #4e4e4e;
+    position: absolute;
+    height: 150px;
+    width:  100%;
+    font-size: small;
+    
+}
+
+.Copyright{
+  margin: 125px;
+}

@@ -1,0 +1,143 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #222222;
+}
+
+/*---------Taille-Menu-------*/
+
+@media only screen and (max-width: 700px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .container p{
+        font-size: 2em;
+        color: white;
+        text-align: center;
+    }
+    .ls{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) and (min-height: 700px) {
+    .container {
+        display: none;
+    }
+}
+
+/*---------Menu-------*/
+#menu{
+    background-color: #222222;
+    position: sticky;
+    overflow: hidden;
+    height: 47px;
+}
+.btnmenu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.btmenu{
+    float: left;   
+}
+.btmenu a:hover:not(.btconnexion){  
+    background-color: red;
+}
+
+.btnmenu a{
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.btconnexion{
+    background: linear-gradient(147deg,#ff0000c8 9%, #190eb479 80%);
+}
+
+input{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#maRecherche {
+    width: 300px;
+    height: 25px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+    color: #444;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #maRecherche:focus {
+    outline: none;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    color: #333;
+    transform: scale(1.1);
+  }
+
+/*---------contenu-------*/
+.ps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #171717;
+}
+
+.contenu{
+    background-color: #171717;
+    width: 100%;
+    height: 90%;
+}
+
+.text{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin-top: 15%;
+}
+
+/*--------------Fin de page------------*/
+footer{ 
+    background: #171717;
+    text-align: center;
+    color: #4e4e4e;
+    position: absolute;
+    height: 150px;
+    width:  100%;
+    font-size: small;
+}
+
+.nos-résaux{
+    margin: 0 auto;
+    color: #fff;
+    width: 500px;
+    height: 40px;
+    border-bottom: 2px #222222 solid;
+}
+
+.images{  
+    height: 60px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
